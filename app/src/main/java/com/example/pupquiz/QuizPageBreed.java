@@ -6,7 +6,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 
@@ -20,6 +22,8 @@ public class QuizPageBreed extends AppCompatActivity implements View.OnClickList
     Fragment fragment;
     int count = 1;
 
+    MediaPlayer player;
+    MediaPlayer buttonMusic;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,10 +32,14 @@ public class QuizPageBreed extends AppCompatActivity implements View.OnClickList
         transit(fragment);
         next = findViewById(R.id.nextBreedBtn);
         next.setOnClickListener(this);
+        player = MediaPlayer.create(this,R.raw.bgmusic);
+        play();
     }
 
     @Override
     public void onClick(View v) {
+        buttonMusic = MediaPlayer.create(this,R.raw.btnmusic);
+        buttonMusic.start();
         count++;
         if (count == 2) {
             fragment = new Question2FragmentBreed();
@@ -86,6 +94,7 @@ public class QuizPageBreed extends AppCompatActivity implements View.OnClickList
             submit(next);
             final_score_prc = 0;
             final_score = 0;
+            player.release();
         }
 
 
@@ -117,6 +126,16 @@ public class QuizPageBreed extends AppCompatActivity implements View.OnClickList
                 .setCustomAnimations(R.anim.animate_fade_enter, R.anim.animate_fade_exit);
         transaction.replace(R.id.tframelayoutid, fragment);
         transaction.commit();
+    }
+
+    public void play(){
+        player.start();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        player.release();
     }
 }
 

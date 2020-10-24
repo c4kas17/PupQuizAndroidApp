@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +27,7 @@ public class QuizPageTrivia extends AppCompatActivity implements View.OnClickLis
     public static int tfinal_score_prc = 0;
     Fragment fragment;
     int count = 1;
-
+    MediaPlayer player;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +38,8 @@ public class QuizPageTrivia extends AppCompatActivity implements View.OnClickLis
 
         fnext = findViewById(R.id.nextTriviaBtn);
         fnext.setOnClickListener(this);
-
+        player = MediaPlayer.create(this,R.raw.bgmusic);
+        play();
     }
 
     @Override
@@ -105,6 +107,7 @@ public class QuizPageTrivia extends AppCompatActivity implements View.OnClickLis
                 submit(fnext);
                 tfinal_score_prc = 0;
                 tfinal_score = 0;
+                player.release();
             }
 
 
@@ -136,5 +139,14 @@ public class QuizPageTrivia extends AppCompatActivity implements View.OnClickLis
                 .setCustomAnimations(R.anim.animate_fade_enter, R.anim.animate_fade_exit);
         transaction.replace(R.id.tframelayoutid, fragment);
         transaction.commit();
+    }
+    public void play(){
+        player.start();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        player.release();
     }
 }

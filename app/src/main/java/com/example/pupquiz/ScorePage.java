@@ -3,6 +3,7 @@ package com.example.pupquiz;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -14,6 +15,7 @@ public class ScorePage extends AppCompatActivity {
     TextView score_txtView;
     String final_score_prc;
     String final_score;
+    MediaPlayer rightMusic, wrongMusic;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,18 +32,34 @@ public class ScorePage extends AppCompatActivity {
 
         score_txtView  = (TextView) findViewById(R.id.scoreLabelText);
         score_txtView.setText(displayScoreText);
-
+        if(getInt(final_score)>5){
+            rightMusic = MediaPlayer.create(this,R.raw.yehey);
+            rightMusic.start();
+        }
+        else if(getInt(final_score)<5){
+            wrongMusic = MediaPlayer.create(this,R.raw.fail);
+            wrongMusic.start();
+        }
 
 
     }
 
     public void onNewQuizClick(View view){
-        Intent intent = new Intent(this, TypeOfQuizPage.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         Animatoo.animateZoom(this);
+        if(getInt(final_score)>5){
+            rightMusic.release();
+        }
+        else if(getInt(final_score)<5) {
+            wrongMusic.release();
+        }
     }
     public void onBackPressed() {
         super.onBackPressed();
         Animatoo.animateSlideRight(this);
+    }
+    public int getInt(String s){
+        return Integer.parseInt(s.replaceAll("[\\D]", ""));
     }
 }

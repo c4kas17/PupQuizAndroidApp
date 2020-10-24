@@ -26,6 +26,7 @@ public class InstructionsGuessTheBreed extends AppCompatActivity {
         Intent intent = new Intent(this, QuizPageBreed.class);
         startActivity(intent);
         Animatoo.animateShrink(this);
+        MainActivity.intro.release();
     }
     public void onBackPressed() {
         super.onBackPressed();

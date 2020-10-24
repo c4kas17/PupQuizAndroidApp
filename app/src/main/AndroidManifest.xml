@@ -17,8 +17,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ScorePage" />
-        <activity android:name=".SubmitPageTrivia" />
-        <activity android:name=".SubmitPageBreed" />
         <activity android:name=".QuizPageTrivia" />
         <activity android:name=".QuizPageBreed" />
         <activity android:name=".InstructionsTrivia" />

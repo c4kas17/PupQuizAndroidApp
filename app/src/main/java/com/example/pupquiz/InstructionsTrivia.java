@@ -26,6 +26,7 @@ public class InstructionsTrivia extends AppCompatActivity {
         Intent intent = new Intent(this, QuizPageTrivia.class);
         startActivity(intent);
         Animatoo.animateShrink(this);
+        MainActivity.intro.release();
     }
     public void onBackPressed() {
         super.onBackPressed();
