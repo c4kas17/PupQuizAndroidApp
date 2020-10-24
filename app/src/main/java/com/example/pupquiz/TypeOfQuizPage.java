@@ -14,14 +14,15 @@ public class TypeOfQuizPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_type_of_quiz_page);
+
     }
 
-    public void onClickBreed (View view){
+    public void gotoBreed (View view){
         Intent intent = new Intent(this, InstructionsGuessTheBreed.class);
         startActivity(intent);
         Animatoo.animateFade(this);
     }
-    public void onClickTrivia (View view){
+    public void gotoTrivia (View view){
         Intent intent = new Intent(this, InstructionsTrivia.class);
         startActivity(intent);
         Animatoo.animateFade(this);

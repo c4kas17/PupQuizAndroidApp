@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="onClickTrivia"
     tools:context=".TypeOfQuizPage">
 
     <ImageView
@@ -42,7 +41,7 @@
         android:layout_marginBottom="30dp"
         android:background="@drawable/btn_background"
         android:fontFamily="@font/bungee_inline"
-        android:onClick="onClickBreed"
+        android:onClick="gotoBreed"
         android:text="@string/guess_btn_lbl"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -60,7 +59,7 @@
         android:layout_marginBottom="140dp"
         android:background="@drawable/btn_background"
         android:fontFamily="@font/bungee_inline"
-        android:onClick="onClickTrivia"
+        android:onClick="gotoTrivia"
         android:text="@string/trivia_btn_lbl"
         android:textSize="30sp"
         android:textStyle="bold"
