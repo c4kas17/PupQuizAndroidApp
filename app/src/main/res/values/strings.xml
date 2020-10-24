@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">PupQuiz</string>
+    <string name="label_type_quiz">CHOOSE THE TYPE OF QUIZ</string>
+    <string name="guess_btn_lbl">Guess the Breed</string>
+    <string name="trivia_btn_lbl">Trivia</string>
+    <string name="trivia_lbl">Trivia Quiz</string>
+    <string name="start_game_btn">Start Game</string>
+    <string name="instruction_label_above">Instructions</string>
+    <string name="instruction_guess_the_breed">Choose the breed of the dog that is shown in the image provided.</string>
+    <string name="instruction_label">A PLAYER WILL BE GIVEN FOUR OPTIONS TO CHOOSE FROM</string>
+    <string name="choice1">CHOICE 1</string>
+    <string name="choice2">CHOICE 2</string>
+    <string name="choice3">CHOICE 3</string>
+    <string name="choice4">CHOICE 4</string>
+    <string name="start_quiz_btn">Start Quiz</string>
+    <string name="instruction_trivia">Choose the right answer to the given dog trivia.</string>
+
+    <string name="question">What is the most common training command taught to dogs?</string>
+    <string name="tq_choice1">Stay</string>
+    <string name="tq_choice2">Sit</string>
+    <string name="tq_choice3">Stand</string>
+    <string name="breed_quiz_label">Guess the breed of the dog</string>
+    <string name="bq_choice1">Labrador</string>
+    <string name="bq_choice2">St. Bernard</string>
+    <string name="bq_choice3">Beagle</string>
+    <string name="bq_choice4">German Shepherd</string>
+    <string name="submit_lbl">Submit</string>
+    <string name="question_label_final">Question 15</string>
+    <string name="score">90%</string>
+    <string name="score_label">Your Score:</string>
+    <string name="scoreText">You answered 14/15 questions correctly</string>
+    <string name="new_quiz_btn_lbl">New Quiz</string>
+
+    <string name="question_label">Question 1</string>
+    <string name="question2_label">Question 2</string>
+    <string name="question3_label">Question 3</string>
+    <string name="question4_label">Question 4</string>
+    <string name="question5_label">Question 5</string>
+    <string name="question6_label">Question 6</string>
+    <string name="question7_label">Question 7</string>
+    <string name="question8_label">Question 8</string>
+    <string name="question9_label">Question 9</string>
+    <string name="question10_label">Question 10</string>
+
+    <!-- Question 2 Breed-->
+    <string name="ch1_breed2">Bulldog</string>
+    <string name="ch2_breed2">Poodle</string>
+    <string name="ch3_breed2">Dalmatian</string>
+    <string name="ch4_breed2">Havanese</string>
+    <!-- Question 3 Breed-->
+    <string name="ch1_breed3">Pomeranian</string>
+    <string name="ch2_breed3">Doberman Pinscher</string>
+    <string name="ch3_breed3">Hokkaido</string>
+    <string name="ch4_breed3">Golden Retriever</string>
+    <!-- Question 4 Breed-->
+    <string name="ch1_breed4">Indian pariah</string>
+    <string name="ch2_breed4">Poodle</string>
+    <string name="ch3_breed4">Japanese Spitz</string>
+    <string name="ch4_breed4">Maltese</string>
+    <!-- Question 5 Breed-->
+    <string name="ch1_breed5">Bulldog</string>
+    <string name="ch2_breed5">Pit Bull</string>
+    <string name="ch3_breed5">Chihuahua</string>
+    <string name="ch4_breed5">Corgi</string>
+    <!-- Question 6 Breed-->
+    <string name="ch1_breed6">Rottweiler</string>
+    <string name="ch2_breed6">Shih Tzu</string>
+    <string name="ch3_breed6">Taiwan Dog</string>
+    <string name="ch4_breed6">Shiba Inu</string>
+    <!-- Question 7 Breed-->
+    <string name="ch1_breed7">Shih Tzu</string>
+    <string name="ch2_breed7">Poodle</string>
+    <string name="ch3_breed7">Beagle</string>
+    <string name="ch4_breed7">Golden Retriever</string>
+    <!-- Question 8 Breed-->
+    <string name="ch1_breed8">Bolognese</string>
+    <string name="ch2_breed8">Havanese</string>
+    <string name="ch3_breed8">Dalmatian</string>
+    <string name="ch4_breed8">Siberian Husky</string>
+    <!-- Question 9 Breed-->
+    <string name="ch1_breed9">German Shepherd</string>
+    <string name="ch2_breed9">Husky</string>
+    <string name="ch3_breed9">Shih Tzu</string>
+    <string name="ch4_breed9">Pug</string>
+    <!-- Question 10 Breed-->
+    <string name="ch1_breed10">Greek Harehound</string>
+    <string name="ch2_breed10">Catalan Sheepdog</string>
+    <string name="ch3_breed10">Bulldog</string>
+    <string name="ch4_breed10">Chihuahua</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

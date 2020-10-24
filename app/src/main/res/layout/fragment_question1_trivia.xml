@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tframeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/choice1TriviaBtn1"
+        android:layout_width="184dp"
+        android:layout_height="58dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="350dp"
+        android:background="@drawable/button_square"
+        android:fontFamily="@font/kreon"
+        android:text="@string/tq_choice1"
+        android:textIsSelectable="false"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionTxtView" />
+
+    <Button
+        android:id="@+id/choice2TriviaBtn1"
+        android:layout_width="184dp"
+        android:layout_height="58dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="430dp"
+        android:background="@drawable/button_square"
+        android:fontFamily="@font/kreon"
+        android:text="@string/tq_choice2"
+        android:textIsSelectable="false"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionTxtView" />
+
+    <Button
+        android:id="@+id/choice3TriviaBtn1"
+        android:layout_width="184dp"
+        android:layout_height="58dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="510dp"
+        android:background="@drawable/button_square"
+        android:fontFamily="@font/kreon"
+        android:text="@string/tq_choice3"
+        android:textIsSelectable="false"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionTxtView" />
+
+    <TextView
+        android:id="@+id/questionLabel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/kreon_light"
+        android:text="@string/question_label"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/question1TxtView"
+        android:layout_width="334dp"
+        android:layout_height="171dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="120dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/kreon"
+        android:gravity="center"
+        android:text="@string/question"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.649"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionLabel" />
+
+    <FrameLayout
+        android:id="@+id/statusLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

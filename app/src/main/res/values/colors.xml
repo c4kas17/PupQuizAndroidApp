@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#333333</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="clicked">#CD42BF</color>
+    <color name="not_clicked">#FDA9A9</color>
+    <color name="rightAns">#01D80A</color>
+    <color name="wrongAns">#FFE91E1E</color>
+</resources>
