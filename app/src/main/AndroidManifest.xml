@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-       <activity android:name=".SplashScreen"/>
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ScorePage" />
         <activity android:name=".SubmitPageTrivia" />
         <activity android:name=".SubmitPageBreed" />
@@ -18,13 +24,7 @@
         <activity android:name=".InstructionsTrivia" />
         <activity android:name=".InstructionsGuessTheBreed" />
         <activity android:name=".TypeOfQuizPage" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity"/>
 
         <meta-data
             android:name="preloaded_fonts"
