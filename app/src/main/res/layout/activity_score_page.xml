@@ -7,14 +7,12 @@
     tools:context=".ScorePage">
 
     <ImageView
-        android:id="@+id/imageView29"
-        android:layout_width="411dp"
-        android:layout_height="731dp"
-        android:background="#9C27B0"
-        android:backgroundTint="#E82196F3"
+        android:id="@+id/imageView"
+        android:layout_width="562dp"
+        android:layout_height="834dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.324"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
@@ -34,10 +32,10 @@
         android:id="@+id/imageView30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="180dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView29"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
         app:srcCompat="@drawable/dog_logo_finalscore" />
 
     <TextView

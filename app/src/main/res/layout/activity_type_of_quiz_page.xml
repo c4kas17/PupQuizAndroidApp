@@ -7,12 +7,12 @@
     tools:context=".TypeOfQuizPage">
 
     <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="438dp"
-        android:layout_height="741dp"
+        android:id="@+id/imageView"
+        android:layout_width="562dp"
+        android:layout_height="834dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintHorizontal_bias="0.324"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
