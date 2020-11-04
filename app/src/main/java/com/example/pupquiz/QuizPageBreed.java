@@ -16,7 +16,7 @@ import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 public class QuizPageBreed extends AppCompatActivity implements View.OnClickListener {
     String val1, val2;
-    public Button next;
+    public static Button next;
     public static int final_score = 0;
     public static int final_score_prc = 0;
     Fragment fragment;
