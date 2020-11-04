@@ -42,4 +42,10 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         intro.pause();
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        intro.release();
+    }
 }
