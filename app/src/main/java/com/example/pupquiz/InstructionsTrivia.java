@@ -16,20 +16,29 @@ public class InstructionsTrivia extends AppCompatActivity {
         setContentView(R.layout.activity_instructions_trivia);
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        MainActivity.intro.start();
+    }
+
     public void backBtnClick (View view){
         Intent intent = new Intent(this, TypeOfQuizPage.class);
         startActivity(intent);
         Animatoo.animateSwipeRight(this);
+        MainActivity.intro.pause();
     }
 
     public void onClickStartTrivia (View view){
         Intent intent = new Intent(this, QuizPageTrivia.class);
         startActivity(intent);
         Animatoo.animateShrink(this);
-        MainActivity.intro.release();
+        MainActivity.intro.pause();
+        MainActivity.buttonClick.start();
     }
     public void onBackPressed() {
         super.onBackPressed();
         Animatoo.animateSlideRight(this);
+        MainActivity.intro.pause();
     }
 }

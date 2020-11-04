@@ -16,6 +16,12 @@ public class InstructionsGuessTheBreed extends AppCompatActivity {
         setContentView(R.layout.activity_instructions_guess_the_breed);
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        MainActivity.intro.start();
+    }
+
     public void backBtnClick (View view){
         Intent intent = new Intent(this, TypeOfQuizPage.class);
         startActivity(intent);
@@ -26,10 +32,16 @@ public class InstructionsGuessTheBreed extends AppCompatActivity {
         Intent intent = new Intent(this, QuizPageBreed.class);
         startActivity(intent);
         Animatoo.animateShrink(this);
-        MainActivity.intro.release();
+        MainActivity.buttonClick.start();
     }
     public void onBackPressed() {
         super.onBackPressed();
         Animatoo.animateSlideRight(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MainActivity.intro.pause();
     }
 }

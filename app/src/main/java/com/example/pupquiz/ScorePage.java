@@ -54,6 +54,7 @@ public class ScorePage extends AppCompatActivity {
         else if(getInt(final_score)<5) {
             wrongMusic.release();
         }
+        MainActivity.buttonClick.start();
     }
     public void onBackPressed() {
         super.onBackPressed();

@@ -28,6 +28,7 @@ public class QuizPageTrivia extends AppCompatActivity implements View.OnClickLis
     Fragment fragment;
     int count = 1;
     MediaPlayer player;
+    MediaPlayer buttonMusic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,8 @@ public class QuizPageTrivia extends AppCompatActivity implements View.OnClickLis
 
     @Override
         public void onClick (View v){
+        buttonMusic = MediaPlayer.create(this,R.raw.nextbgmusic);
+        buttonMusic.start();
             count++;
             if (count == 2) {
                 fragment = new Question2FragmentTrivia();

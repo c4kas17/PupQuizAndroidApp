@@ -16,7 +16,7 @@ import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 public class QuizPageBreed extends AppCompatActivity implements View.OnClickListener {
     String val1, val2;
-    public static Button next;
+    public Button next;
     public static int final_score = 0;
     public static int final_score_prc = 0;
     Fragment fragment;
@@ -32,13 +32,22 @@ public class QuizPageBreed extends AppCompatActivity implements View.OnClickList
         transit(fragment);
         next = findViewById(R.id.nextBreedBtn);
         next.setOnClickListener(this);
+
         player = MediaPlayer.create(this,R.raw.bgmusic);
-        play();
+        player.setLooping(true);
+        buttonMusic = MediaPlayer.create(this,R.raw.nextbgmusic);
+        buttonMusic.setLooping(false);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        player.start();
     }
 
     @Override
     public void onClick(View v) {
-        buttonMusic = MediaPlayer.create(this,R.raw.btnmusic);
+
         buttonMusic.start();
         count++;
         if (count == 2) {
@@ -94,7 +103,6 @@ public class QuizPageBreed extends AppCompatActivity implements View.OnClickList
             submit(next);
             final_score_prc = 0;
             final_score = 0;
-            player.release();
         }
 
 
@@ -115,7 +123,7 @@ public class QuizPageBreed extends AppCompatActivity implements View.OnClickList
         intent.putExtra("FINAL_SCORE_PERCENT", val1);
         intent.putExtra("FINAL_SCORE",val2);
         startActivity(intent);
-        Animatoo.animateSpin(this);
+        Animatoo.animateSplit(this);
 
 
     }
@@ -128,14 +136,11 @@ public class QuizPageBreed extends AppCompatActivity implements View.OnClickList
         transaction.commit();
     }
 
-    public void play(){
-        player.start();
-    }
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        player.release();
+    protected void onPause() {
+        super.onPause();
+        player.pause();
     }
 }
 
