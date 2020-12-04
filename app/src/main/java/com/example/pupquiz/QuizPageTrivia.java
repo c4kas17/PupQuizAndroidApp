@@ -40,9 +40,13 @@ public class QuizPageTrivia extends AppCompatActivity implements View.OnClickLis
         fnext = findViewById(R.id.nextTriviaBtn);
         fnext.setOnClickListener(this);
         player = MediaPlayer.create(this,R.raw.bgmusic);
-        play();
+        player.start();
     }
-
+    @Override
+    protected void onStart() {
+        super.onStart();
+        player.start();
+    }
     @Override
         public void onClick (View v){
         buttonMusic = MediaPlayer.create(this,R.raw.nextbgmusic);
@@ -110,7 +114,7 @@ public class QuizPageTrivia extends AppCompatActivity implements View.OnClickLis
                 submit(fnext);
                 tfinal_score_prc = 0;
                 tfinal_score = 0;
-                player.release();
+            //    player.release();
             }
 
 
@@ -143,13 +147,16 @@ public class QuizPageTrivia extends AppCompatActivity implements View.OnClickLis
         transaction.replace(R.id.tframelayoutid, fragment);
         transaction.commit();
     }
-    public void play(){
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         player.start();
     }
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        player.release();
+    protected void onPause() {
+        super.onPause();
+        player.pause();
     }
 }
