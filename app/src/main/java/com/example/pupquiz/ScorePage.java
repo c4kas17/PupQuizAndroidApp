@@ -35,10 +35,12 @@ public class ScorePage extends AppCompatActivity {
         if(getInt(final_score)>5){
             rightMusic = MediaPlayer.create(this,R.raw.yehey);
             rightMusic.start();
+            rightMusic.setLooping(false);
         }
         else if(getInt(final_score)<6){
             wrongMusic = MediaPlayer.create(this,R.raw.fail);
             wrongMusic.start();
+            wrongMusic.setLooping(false);
         }
     }
 
@@ -47,10 +49,10 @@ public class ScorePage extends AppCompatActivity {
         startActivity(intent);
         Animatoo.animateZoom(this);
         if(getInt(final_score)>5){
-            rightMusic.release();
+            rightMusic.pause();
         }
         else if(getInt(final_score)<6) {
-            wrongMusic.release();
+            wrongMusic.pause();
         }
         MainActivity.buttonClick.start();
     }
