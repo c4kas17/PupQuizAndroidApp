@@ -136,7 +136,7 @@ public class QuizPageTrivia extends AppCompatActivity implements View.OnClickLis
         intent.putExtra("FINAL_SCORE_PERCENT", val1);
         intent.putExtra("FINAL_SCORE",val2);
         startActivity(intent);
-        Animatoo.animateSpin(this);
+        Animatoo.animateSplit(this);
 
 
     }

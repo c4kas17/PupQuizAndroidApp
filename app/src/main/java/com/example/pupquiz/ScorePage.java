@@ -32,15 +32,14 @@ public class ScorePage extends AppCompatActivity {
 
         score_txtView  = (TextView) findViewById(R.id.scoreLabelText);
         score_txtView.setText(displayScoreText);
+        rightMusic = MediaPlayer.create(this,R.raw.yehey);
+        wrongMusic = MediaPlayer.create(this,R.raw.fail);
         if(getInt(final_score)>5){
-            rightMusic = MediaPlayer.create(this,R.raw.yehey);
             rightMusic.start();
-            rightMusic.setLooping(false);
         }
         else if(getInt(final_score)<6){
-            wrongMusic = MediaPlayer.create(this,R.raw.fail);
+
             wrongMusic.start();
-            wrongMusic.setLooping(false);
         }
     }
 
@@ -56,6 +55,18 @@ public class ScorePage extends AppCompatActivity {
         }
         MainActivity.buttonClick.start();
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(getInt(final_score)>5){
+            rightMusic.start();
+        }
+        else if(getInt(final_score)<6){
+            wrongMusic.start();
+        }
+    }
+
     public void onBackPressed() {
         super.onBackPressed();
         Animatoo.animateSlideRight(this);
@@ -64,3 +75,4 @@ public class ScorePage extends AppCompatActivity {
         return Integer.parseInt(s.replaceAll("[\\D]", ""));
     }
 }
+
